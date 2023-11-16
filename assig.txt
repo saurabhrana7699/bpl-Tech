@@ -1,0 +1,58 @@
+1 Write briefly about which subject in your bachelor's or master's degree did you like the most. And why?
+
+Ans :- I enjoyed studying accounting the most during my bachelor's degree. I found it fascinating because it provided a structured and logical framework for understanding and analyzing financial information. The principles of accounting allowed me to make sense of complex financial transactions and gain insights into the financial health of businesses. Additionally, I appreciated how accounting skills are universally applicable across various industries, making it a versatile and valuable area of study.
+
+
+2 What additional thing have you done in that subject outside of learning and scoring good marks in that subject?
+Ans In addition to excelling academically in accounting, I actively sought real-world applications to enhance my understanding. I participated in internships that allowed me to apply theoretical concepts to practical situations, gaining hands-on experience in financial analysis and reporting. I also engaged in extracurricular activities related to accounting, such as joining financial clubs and attending industry conferences. These experiences not only deepened my knowledge but also helped me develop a network within the accounting community, providing valuable insights beyond the classroom.
+
+3  Have you learned anything new in the last 6 months? If so, how did you go about learning it?
+For 6 months I have been learning related to technical  In technical terms, I am learning tailwind CSS and some technical and AI tools which help me with coding and 
+All other related things related to technical and for the free time in my area there is a lake so i just go over there to learn swimming for my better health and for the 
+excercise its really good for me and i and learning this last 5 months.
+
+4 To check your English communication skills, write a passage on any one of the three topics mentioned below in 200 words Your favorite travel destination and why do you think it is overrated or underrated?
+Ans  Vrindavan, nestled on the banks of the Yamuna River in Uttar Pradesh, India, holds a special place in my heart as my favorite travel destination. This sacred town is not merely a geographical location; it's a spiritual journey, a connection with divinity. The enchanting ambiance of Vrindavan is heightened by its revered temples, such as the ISKCON Temple, Prem Mandir, and the iconic Banke Bihari Temple. The ISKCON Temple, with its architectural grandeur and devotional atmosphere, is a testament to the harmonious blend of modernity and tradition. Prem Mandir, adorned with intricate white marble carvings depicting episodes from Lord Krishna's life, exudes a sense of divine beauty. The Banke Bihari Temple, dedicated to the playful and mischievous deity, is a hub of fervent devotion and joyous celebrations. However, the underrated aspect of Vrindavan lies in its peaceful, rustic charm that often gets overshadowed by the bustling tourist destinations. The town's narrow lanes, resonating with the sounds of hymns and temple bells, offer a serene retreat for those seeking solace. While Vrindavan may not boast the commercial glamour of some popular destinations, its spiritual richness and cultural heritage make it a gem waiting to be explored by those who seek a deeper, more profound travel experience.
+
+5 : 1 :-  For a school, I would like to store the marks for all the students of grade 1 to 8 for all the subjects they study.
+Ans
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Grade INT
+);
+
+CREATE TABLE Subjects (
+    SubjectID INT PRIMARY KEY AUTO_INCREMENT,
+    SubjectName VARCHAR(50)
+);
+
+CREATE TABLE StudentMarks (
+    MarkID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentID INT,
+    SubjectID INT,
+    Mark INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
+);
+
+
+5 : 4 :- Generate a report that will show all the students who have scored more than 60%
+Ans       select * from student where studentmarks > 60
+
+5:3:- Design a table structure to store the student marks in all subjects  solution in sql query
+Ans 
+CREATE TABLE StudentMarks (
+    MarkID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentID INT,
+    SubjectID INT,
+    Mark INT,
+    Grade INT,
+    Semester INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
+);
+
+
